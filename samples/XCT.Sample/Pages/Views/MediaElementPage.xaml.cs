@@ -15,5 +15,14 @@ namespace Xamarin.CommunityToolkit.Sample.Pages.Views
 		void OnSeekCompleted(object? sender, EventArgs e) => Console.WriteLine("Seek completed.");
 
 		void OnResetClicked(object? sender, EventArgs e) => mediaElement.Source = null;
+
+		private void Increase(object sender, EventArgs e)
+		{
+			mediaElement.Speed += .5;
+		}
+		private void Decrease(object sender, EventArgs e)
+		{
+			mediaElement.Speed -= .5;
+		}
 	}
 }
